@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylee.css">
+    <title>Fit-Verse</title>
+</head>
+<body>
+    <header>
+        <nav class="navigateBar">
+            <div class="logo"> Fit-Verse</div>
+            <ul class="navlink">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+            <button class="buttonReg">Register</button>
+        </nav>
+    </header>
+    <div class="heroBox">
+        <h1 class="fitTitle">Welcome to Fit-Verse</h1>
+        <p class="fitInfo">Create your custom nutrition and workout plans</p>
+        <button class="getStart" id="startBtn">Get Started</button>
+    </div>
+    <div class="overlayReg" id="overReg">
+        <div class="overLogo" id="overLogo">X</div>
+        <h2 class="overTitle">Create Profile</h2>
+        <form id="regForm">
+            <div class="inputForm">
+                <label>Your Name</label>
+                <input type="text" id="userName" placeholder="Enter Your Name">
+            </div>
+            <div class="inputForm">
+                <label>password</label>
+                <input type="password" id="userPassword" placeholder="Enter Your Password">
+            </div>
+            <div class="inputForm">
+                <label>Your Gmail</label>
+                <input type="email" id="userGmail" placeholder="Enter Your Gmail">
+            </div>
+            <div class="inputForm">
+                <label>Phone Number</label>
+                <input type="tel" id="userNumber" placeholder="Enter Phone Number">
+            </div>
+            <button type="submit" class="submitBtn">Submit</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
