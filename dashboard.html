@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylee.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Fit-Verse Dashboard</title>
 </head>
 <body>
+    <header>
+        <nav class="navigateBar">
+            <div class="logo"> Fit-Verse</div>
+            <ul class="navlink" id="navlink">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+            <button class="buttonReg">Register</button>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mentors">
+            <h2 class="fitTitle">Mentors</h2>
+            <p class="fitInfo">Nutrition specialists who will help you with your diet plan</p>
+            <div class="coachMentor" id="mentorCont"></div>
+        </section>
+
+        <section class="coaches">
+            <h2 class="fitTitle">Coaches</h2>
+            <p class="fitInfo">Training experts who will help you with your workout plan</p>
+            <div class="coachMentor" id="coachCont"></div>
+        </section>
+    </main>
+
+
+    <article id="article">
+        <h2>we are using cookie politics</h2>
+        <p>Cookies collect your device data to offer you personalized news and services.</p>
+        <button id="access">access</button>
+        <button id="decline">decline</button>
+    </article>
+
+    <footer class="footer">
+        <div class="footerNav">
+            <div class="footerLogo">Fit-Verse</div>
+            <ul class="footerLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <p class="footerText">© 2025 Fit-Verse. All rights reserved.</p>
+    </footer>
     
     <script src="./dashboard.js"></script>
 </body>

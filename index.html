@@ -4,48 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylee.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>Fit-Verse</title>
 </head>
 <body>
     <header>
         <nav class="navigateBar">
             <div class="logo"> Fit-Verse</div>
-            <ul class="navlink">
+            <ul class="navlink" id="navlink">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./dashboard.html">Dashboard</a></li>
                 <li><a href="./profile.html">Profile</a></li>
             </ul>
             <button class="buttonReg">Register</button>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
-    <div class="heroBox">
-        <h1 class="fitTitle">Welcome to Fit-Verse</h1>
-        <p class="fitInfo">Create your custom nutrition and workout plans</p>
-        <button class="getStart" id="startBtn">Get Started</button>
-    </div>
-    <div class="overlayReg" id="overReg">
-        <div class="overLogo" id="overLogo">X</div>
-        <h2 class="overTitle">Create Profile</h2>
-        <form id="regForm">
-            <div class="inputForm">
-                <label>Your Name</label>
-                <input type="text" id="userName" placeholder="Enter Your Name">
-            </div>
-            <div class="inputForm">
-                <label>password</label>
-                <input type="password" id="userPassword" placeholder="Enter Your Password">
-            </div>
-            <div class="inputForm">
-                <label>Your Gmail</label>
-                <input type="email" id="userGmail" placeholder="Enter Your Gmail">
-            </div>
-            <div class="inputForm">
-                <label>Phone Number</label>
-                <input type="tel" id="userNumber" placeholder="Enter Phone Number">
-            </div>
-            <button type="submit" class="submitBtn">Submit</button>
-        </form>
-    </div>
+    <main>
+        <div class="heroBox">
+            <h1 class="fitTitle">Welcome to Fit-Verse</h1>
+            <p class="fitInfo">Create your custom nutrition and workout plans</p>
+            <button class="getStart" id="startBtn">Get Started</button>
+        </div>
+        <div class="overlayReg" id="overReg">
+            <div class="overLogo" id="overLogo">X</div>
+            <h2 class="overTitle">Create Profile</h2>
+            <form id="regForm">
+                <div class="inputForm">
+                    <label>Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter Your Name">
+                </div>
+                <div class="inputForm">
+                    <label>password</label>
+                    <input type="password" id="userPassword" placeholder="Enter Your Password">
+                </div>
+                <div class="inputForm">
+                    <label>Your Gmail</label>
+                    <input type="email" id="userGmail" placeholder="Enter Your Gmail">
+                </div>
+                <div class="inputForm">
+                    <label>Phone Number</label>
+                    <input type="tel" id="userNumber" placeholder="Enter Phone Number">
+                </div>
+                <button type="submit" class="submitBtn">Submit</button>
+            </form>
+        </div>
+    </main>
+    <button class="scrolltop" id="scrolltop">▲</button>
+    <footer class="footer">
+        <div class="footerNav">
+            <div class="footerLogo">Fit-Verse</div>
+            <ul class="footerLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <p class="footerText">© 2025 Fit-Verse. All rights reserved.</p>
+    </footer>
+    
     <script src="./index.js"></script>
 </body>
 </html>

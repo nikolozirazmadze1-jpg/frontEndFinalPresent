@@ -1,5 +1,3 @@
-
-
 const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._#])[A-Za-z\d@$!%*?&._#]{6,18}$/;
 const phoneRegex = /^\+9955\d{8}$/;
@@ -11,6 +9,9 @@ const buttonReg = document.querySelector(".buttonReg");
 const startBtn = document.getElementById("startBtn");
 const exitLogo =  document.getElementById("overLogo");
 const regForm = document.getElementById("regForm");
+const burger = document.getElementById("burger");
+const navlink = document.getElementById("navlink");
+const scrolltop = document.getElementById("scrolltop");
 
 
 
@@ -76,5 +77,22 @@ regForm.addEventListener('submit', (event) => {
     window.location.href = './dashboard.html';
 });
 
+burger.addEventListener('click', ()=>{
+    navlink.classList.toggle("open");
+});
 
+window.addEventListener('scroll', () =>{
+    if(window.scrollY > 300){
+        scrolltop.style.display = "block";
+    }
+    else{
+        scrolltop.style.display = "none";
+    }
+});
 
+scrolltop.addEventListener("click", () =>{
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
