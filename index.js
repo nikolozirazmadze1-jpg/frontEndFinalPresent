@@ -11,7 +11,7 @@ const exitLogo =  document.getElementById("overLogo");
 const regForm = document.getElementById("regForm");
 const burger = document.getElementById("burger");
 const navlink = document.getElementById("navlink");
-const scrolltop = document.getElementById("scrolltop");
+
 
 
 
@@ -73,26 +73,23 @@ regForm.addEventListener('submit', (event) => {
     }
     localStorage.setItem('person_user', userNameVal);
     localStorage.setItem('person_gmail', userGmailVal);
+    localStorage.setItem("person_num", userNumberVal);
 
     window.location.href = './dashboard.html';
 });
+
+
+window.addEventListener('load', function(){
+
+    let userStatus = localStorage.getItem("person_user");
+    if(userStatus && buttonReg){
+        buttonReg.classList.add('invisible');
+    }
+});
+
+
 
 burger.addEventListener('click', ()=>{
     navlink.classList.toggle("open");
 });
 
-window.addEventListener('scroll', () =>{
-    if(window.scrollY > 300){
-        scrolltop.style.display = "block";
-    }
-    else{
-        scrolltop.style.display = "none";
-    }
-});
-
-scrolltop.addEventListener("click", () =>{
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});

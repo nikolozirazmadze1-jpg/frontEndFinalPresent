@@ -7,6 +7,44 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav class="navigateBar">
+            <div class="logo"> Fit-Verse</div>
+            <ul class="navlink" id="navlink">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+            <button class="buttonReg">Register</button>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="chat">
+            <div class="messages" id="messages"></div>
+            <div class="mychat">
+                <input type="text" id="myInput">
+                <button id="sendBtn">➤</button>
+                <img src="./defaultProfile.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footerNav">
+            <div class="footerLogo">Fit-Verse</div>
+            <ul class="footerLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <p class="footerText">© 2026 Fit-Verse. All rights reserved.</p>
+    </footer>
     <script  src="./chat.js"></script>
 </body>
 </html>

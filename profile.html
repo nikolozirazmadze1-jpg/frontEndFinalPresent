@@ -7,7 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navigateBar">
+            <div class="logo"> Fit-Verse</div>
+            <ul class="navlink" id="navlink">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+            <button class="buttonReg">Register</button>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="profile_head">
+            <div class="profile_info" id="profileInfo">
+                <label for="photoUpload" class="photoLabel">
+                    <img src="./defaultProfile.jpg" alt="" id="profilePhoto">
+                </label>
+                <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                <div class="profileText">
+                    <h2 id="userName"></h2>
+                    <p id="userGmail"></p>
+                    <p id="userNum"></p>
+                </div>
+            </div>
+            <div class="weather" id="weather"></div>
+        </div>
+        <div class="mainInfo">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footerNav">
+            <div class="footerLogo">Fit-Verse</div>
+            <ul class="footerLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <p class="footerText">© 2026 Fit-Verse. All rights reserved.</p>
+    </footer>
     <script src="./profile.js"></script>
 </body>
 </html>
