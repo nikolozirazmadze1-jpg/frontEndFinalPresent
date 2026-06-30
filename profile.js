@@ -26,7 +26,46 @@ window.addEventListener("load", function(){
         document.getElementById("profilePhoto").src = savedPhoto;
     }
 
+    const userSubscription = JSON.parse(localStorage.getItem("userSubscription"));
+    const sub = document.getElementById("subs");
 
+
+    if(userSubscription && userSubscription.experts){
+        const experts = userSubscription.experts;
+        sub.innerHTML = `
+            <p>${experts.firstName} ${experts.lastName}</p>
+            <p>${experts.role}</p>
+        `;
+    }
+    else{
+        sub.innerHTML = `<p>No subscription yet</p>`;
+    }
+    const mealPlan = JSON.parse(localStorage.getItem("nutritionPlan"));
+    const meal = document.getElementById("meal");
+
+    if(mealPlan){
+        meal.innerHTML =  `
+            <p> Carbs: ${mealPlan.carbs} </p>
+            <p> protein: ${mealPlan.protein} </p>
+            <p> Fat: ${mealPlan.fat} </p>
+        `;
+    }else{
+        meal.innerHTML = `<p>No meal plan yet</p>`
+    }
+
+    const workoutPlan = JSON.parse(localStorage.getItem("workoutPlan"));
+    const workout = document.getElementById("workout");
+    if(workoutPlan){
+        workout.innerHTML = `
+            <p> Monday: ${workoutPlan.monday} </p>
+            <p> Wednesday: ${workoutPlan.wednesday} </p>
+            <p> Friday: ${workoutPlan.friday} </p>
+            <p> Sudnay: ${workoutPlan.sunday} </p>
+        `;
+    }
+    else{
+        workout.innerHTML = `<p>No workout plan yet</p>`
+    }
 });
 
 async function fetchWeather(){
@@ -41,9 +80,9 @@ async function fetchWeather(){
         const weatherCon = document.getElementById("weather");
         weatherCon.innerHTML = `
             <h2>Tbilisi</h2>
-            <P>${temp}°C</p>
-            <p>${desc}</P>
-            <p>${hum}%</p>
+            <P>Temperature :${temp}°C</p>
+            <p>Weather${desc}</P>
+            <p>Humidity: ${hum}%</p>
         `;
     }
     catch(error){
@@ -66,22 +105,8 @@ profileUpload.addEventListener("change", function(){
 });
 
 
-window.addEventListener('load', function(){
-    let status = this.localStorage.getItem("storageStatus");
-    if(status){
-        hideart();
-    }
-
-    let userStatus = localStorage.getItem("person_user");
-    if(userStatus && buttonReg){
-        buttonReg.classList.add('invisible');
-    }
-    
-    fetchUsers();
-});
 
 burger.addEventListener('click', ()=>{
     navlink.classList.toggle("open");
 });
-
 

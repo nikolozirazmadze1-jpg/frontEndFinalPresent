@@ -250,6 +250,14 @@ header{
     .footerLinks{
         visibility: hidden;
     }
+        .chat {
+        width: 95%;
+        margin: 10px;
+    }
+    #myInput {
+        width: 60%;
+        right: 70px;
+    }
 }
 
 @media (max-width: 480px){
@@ -259,6 +267,22 @@ header{
     .getStart{
         font-size: 20px;
         padding: 5px;
+    }
+        .chat {
+        width: 95%;
+        height: 75%;
+    }
+    #myInput {
+        width: 55%;
+        right: 65px;
+        font-size: 14px;
+    }
+    #sendBtn {
+        width: 35px;
+        height: 35px;
+    }
+    .mychat img {
+        height: 40px;
     }
 }
 
@@ -510,14 +534,26 @@ article p{
     align-items: center;
     gap: 20px;
     padding: 20px;
-    width: 90%;
+    width: 80%;
     top: 80px;
     height: 200px;
     left: 40px;
     right: 40px;
-    background-color: gray;
+    background-color: rgba(20, 50, 10, 0.562);
     margin: 20px 40px;
     border-radius: 20px;
+    border: 3px solid white;
+}
+.subs p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.subs{
+    background-color:  rgba(20, 50, 10, 0.562);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 40px;
 }
 .profile_info{
     display: flex;
@@ -525,6 +561,7 @@ article p{
     align-items: center;
     justify-content: center;
     flex: 1;
+    color: white;
     gap: 10px;
 }
 #profilePhoto{
@@ -566,15 +603,32 @@ article p{
     flex: 1;
 }
 .mainInfo{
-    width: 90%;
-    top: 320px;
-    height: 400px;
-    left: 40px;
-    right: 40px;
-    background-color: gray;
+    width: 80%;
+    min-height: 100vh;
+    background-color: rgba(20, 50, 10, 0.562);
     margin: 20px 40px;
-    pad: 10px;
+    border: 3px solid white;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.mainInfoBox {
+    flex: 1;
+    background-color: black;
+    border-radius:  20px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    border: 3px solid white;
+    margin: 20px 40px;
+}
+.boxTitle{
+    letter-spacing: 2px;
+    color: whitesmoke;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 .weather {
     flex: 1;
@@ -582,7 +636,7 @@ article p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
     gap: 8px;
 }
 
@@ -594,49 +648,81 @@ article p{
 
 .weather p {
     font-size: 16px;
-    color: black;
+    color: white;
 }
 .chat{
     position: absolute;
-    top: 80px;
+    bottom: 40px;
     margin: 20px 40px;
     height: 80%;
     width: 90%;
-    background-color: gray;
+    background-color: rgb(6, 21, 1);
     border: 3px solid green;
     border-radius: 20px;
 }
 #myInput{
-    position: absolute;
-    bottom: 20px;
-    width: 70%;
-    right: 80px;
+    flex: 1;
     background-color: black;
     height: 40px;
     border-radius: 20px;
     color: white;
     cursor: pointer;
-    margin: 0 10px;
     padding: 0 20px;
+    margin: 0 10px;
+}
+
+.mychat{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
 }
 .mychat img {
-    position: absolute;
     height: 50px;
     border-radius: 50%;
     bottom: 20px;
     right: 20px;
-    
 }
 #sendBtn{
     rotate:calc(-90deg);
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
+    margin: 0 10px;
     background-color: #00ff88;
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    cursor: pointer;
     font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.messages {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 90px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myMessage {
+    align-self: flex-end;
+    background-color: #00ff88;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 60%;
+}
+.mentorMessage{
+    cursor: pointer;
+    align-self: flex-start;
+    background-color: rgb(20, 50, 10);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 60%;
 }
